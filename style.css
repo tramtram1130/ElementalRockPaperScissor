@@ -1,0 +1,107 @@
+.body-container{
+  display: flex;
+  height: 100vh
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  border: black solid 5px;
+  width: 20%;
+}
+
+.trainer-sprite {
+  width: 50px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trainer-title {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 35px;
+}
+
+.trainer-battles-won-title {
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  border: blue solid 5px;
+  width: 60%;
+}
+
+.game-title {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.choose-your-game-title {
+  text-align: center;
+}
+
+.classic-mode-container {
+  width: 220px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 75px;
+  border: black solid 2px;
+}
+
+.classic-mode-title {
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.classic-mode-container > p {
+  text-align: center;
+  margin-bottom: -7px;
+}
+
+.difficult-mode-container {
+  width: 220px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: black solid 2px;
+}
+
+.difficult-mode-title {
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.difficult-mode-container > p {
+  text-align: center;
+  margin-bottom: -7px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  border: red solid 5px;
+  width: 20%;
+}
+
+.rival-sprite {
+  width: 70px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rival-title {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 35px;
+}
+
+.rival-battles-won-title {
+  text-align: center;
+}
