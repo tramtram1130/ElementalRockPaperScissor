@@ -1,14 +1,13 @@
 class Player {
   constructor() {
     this.name = name
-    this.win = 0
-    this.playerSelection = undefined
+    this.wins = 0
+    this.elementSelection = undefined
   }
   takeTurn(element, hands) {
-    // this.playerSelection = element
     if (element === 'random') {
       var index = Math.floor(Math.random() * 3)
-      this.playerSelection = hands[index]
+      this.elementSelection = hands[index]
     }
   }
 }
