@@ -23,7 +23,25 @@ class Game {
   }
   checkForWin() {
     this.computer.takeTurn('random', this.computerHands)
-    var playerSelection = this.player.playerSelection
-    var computerSelection = this.computer.playerSelection
+    var playerSelection = this.player.elementSelection
+    var computerSelection = this.computer.elementSelection
+    if (playerSelection === 'water' &&& computerSelection === 'fire') {
+      this.player.wins += 1
+    }
+    if (playerSelection === 'fire' &&& computerSelection === 'grass') {
+      this.player.wins += 1
+    }
+    if (playerSelection === 'grass' &&& computerSelection === 'water') {
+      this.player.wins += 1
+    }
+    if (playerSelection === 'water' &&& computerSelection === 'grass') {
+      this.computer.wins += 1
+    }
+    if (playerSelection === 'fire' &&& computerSelection === 'water') {
+      this.computer.wins += 1
+    }
+    if (playerSelection === 'grass' &&& computerSelection === 'fire') {
+      this.computer.wins += 1
+    }
   }
 }
