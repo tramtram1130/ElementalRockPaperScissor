@@ -1,6 +1,6 @@
 class Player {
   constructor() {
-    this.name = name
+    // this.name = name
     this.wins = 0
     this.elementSelection = undefined
   }
@@ -11,3 +11,5 @@ class Player {
     }
   }
 }
+
+module.exports = Player
