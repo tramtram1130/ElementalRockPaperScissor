@@ -36,97 +36,85 @@ class Game {
     if (playerSelection === computerSelection) {
       return "It's a draw!"
     }
-    if (playerSelection === 'water' && computerSelection === 'fire') {
+    else if (playerSelection === 'water' && computerSelection === 'fire') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'water' && computerSelection === 'ground') {
+    else if (playerSelection === 'water' && computerSelection === 'ground') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'fire' && computerSelection === 'grass') {
+    else if (playerSelection === 'fire' && computerSelection === 'grass') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'fire' && computerSelection === 'electric') {
+    else if (playerSelection === 'fire' && computerSelection === 'electric') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'grass' && computerSelection === 'water') {
+    else if (playerSelection === 'grass' && computerSelection === 'water') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'grass' && computerSelection === 'ground') {
+    else if (playerSelection === 'grass' && computerSelection === 'ground') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'electric' && computerSelection === 'water') {
+    else if (playerSelection === 'electric' && computerSelection === 'water') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'electric' && computerSelection === 'grass') {
+    else if (playerSelection === 'electric' && computerSelection === 'grass') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'ground' && computerSelection === 'electric') {
+    else if (playerSelection === 'ground' && computerSelection === 'electric') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'ground' && computerSelection === 'fire') {
+    else if (playerSelection === 'ground' && computerSelection === 'fire') {
       this.player.wins += 1
+      return `${this.player.name} wins this battle!`
     }
-    if (playerSelection === 'water' && computerSelection === 'grass') {
+    else if (playerSelection === 'water' && computerSelection === 'grass') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'water' && computerSelection === 'electric') {
+    else if (playerSelection === 'water' && computerSelection === 'electric') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'fire' && computerSelection === 'water') {
+    else if (playerSelection === 'fire' && computerSelection === 'water') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'fire' && computerSelection === 'ground') {
+    else if (playerSelection === 'fire' && computerSelection === 'ground') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'grass' && computerSelection === 'fire') {
+    else if (playerSelection === 'grass' && computerSelection === 'fire') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'grass' && computerSelection === 'electric') {
+    else if (playerSelection === 'grass' && computerSelection === 'electric') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'electric' && computerSelection === 'ground') {
+    else if (playerSelection === 'electric' && computerSelection === 'ground') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'electric' && computerSelection === 'fire') {
+    else if (playerSelection === 'electric' && computerSelection === 'fire') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'ground' && computerSelection === 'water') {
+    else if (playerSelection === 'ground' && computerSelection === 'water') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
-    if (playerSelection === 'ground' && computerSelection === 'grass') {
+    else if (playerSelection === 'ground' && computerSelection === 'grass') {
       this.computer.wins += 1
+      return `${this.computer.name} wins this battle!`
     }
   }
-
 }
-
-// var newGame = new Game
-
-// console.log('Player 1 Wins: ' + newGame.player.wins)
-// console.log('Player 2 Wins: ' + newGame.computer.wins)
-// newGame.selectClassicMode()
-// newGame.makeSelections()
-// newGame.checkForWin()
-// console.log('Round 1')
-// console.log('Player 1 Wins: ' + newGame.player.wins)
-// console.log('Player 2 Wins: ' + newGame.computer.wins)
-// console.log('Player 1 Selection: ' + newGame.player.elementSelection)
-// console.log('Player 2 Selection: ' + newGame.computer.elementSelection)
-// newGame.makeSelections()
-// newGame.checkForWin()
-// console.log('Round 2')
-// console.log('Player 1 Wins: ' + newGame.player.wins)
-// console.log('Player 2 Wins: ' + newGame.computer.wins)
-// console.log('Player 1 Selection: ' + newGame.player.elementSelection)
-// console.log('Player 2 Selection: ' + newGame.computer.elementSelection)
-// newGame.makeSelections()
-// newGame.checkForWin()
-// console.log('Round 3')
-// console.log('Player 1 Wins: ' + newGame.player.wins)
-// console.log('Player 2 Wins: ' + newGame.computer.wins)
-// console.log('Player 1 Selection: ' + newGame.player.elementSelection)
-// console.log('Player 2 Selection: ' + newGame.computer.elementSelection)
-// newGame.resetGame()
-// console.log('RESET!')
-// console.log('Player 1 Wins: ' + newGame.player.wins)
-// console.log('Player 2 Wins: ' + newGame.computer.wins)

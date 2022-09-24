@@ -8,7 +8,7 @@
   <body class="body-container">
     <section class="left-container">
       <img class="trainer-sprite" src="https://www.pikpng.com/pngl/b/413-4137492_pokemons-red-sprite-snow-on-mt-silver-red.png" alt="pokemon trainer">
-      <h2 class="trainer-title">Trainer</h2>
+      <h2 class="trainer-title"></h2>
       <h2 class="trainer-battles-won-title">Battles won: </h2>
       <button type="button" name="button">Change Mode?</button>
     </section>
@@ -16,6 +16,7 @@
       <h1 class="game-title">Water, Fire, Grass</h1>
       <h2 class="choose-your-game-title">Choose your game!</h2>
       <h2 class="choose-your-fighter-title hidden">Choose your fighter!</h2>
+      <h2 class="battle-result-title hidden"></h2>
       <section class="home-container">
         <section class="classic-mode-container">
           <h3 class="classic-mode-title">CLASSIC</h3>
@@ -33,20 +34,25 @@
         </section>
       </section>
       <section class="game-board-container">
-        <section class="classic-mode-sprites hidden">
-          <img class="water-sprite" name="water" src="https://www.pngkey.com/png/full/439-4399737_squirtle-pokemon-squirtle-sprite.png" alt="water pokemon">
-          <img class="fire-sprite" name="fire" src="https://art.pixilart.com/fc93560c7c16.png" alt="fire pokemon">
-          <img class="grass-sprite" name="grass" src="https://art.pixilart.com/a2c7d2428450173.png" alt="grass pokemon">
+        <section class="fighter-selection-container">
+          <section class="classic-mode-sprites hidden">
+            <img class="water-sprite" name="water" src="https://www.pngkey.com/png/full/439-4399737_squirtle-pokemon-squirtle-sprite.png" alt="water pokemon">
+            <img class="fire-sprite" name="fire" src="https://art.pixilart.com/fc93560c7c16.png" alt="fire pokemon">
+            <img class="grass-sprite" name="grass" src="https://art.pixilart.com/a2c7d2428450173.png" alt="grass pokemon">
+          </section>
+          <section class="difficult-mode-sprites hidden">
+            <img class="electric-sprite" name="electric" src="https://www.clipartmax.com/png/full/475-4755912_pikachu-pokemon-pok%C3%A9mon-cute-kawaii-pixel-pixelart-pikachu-gen-3-sprite.png" alt="electric pokemon">
+            <img class="ground-sprite" name="ground" src="https://www.pngplay.com/wp-content/uploads/11/Geodude-PNG-HD-Free-File-Download.png" alt="ground pokemon">
+          </section>
         </section>
-        <section class="difficult-mode-sprites hidden">
-          <img class="electric-sprite" name="electric" src="https://www.clipartmax.com/png/full/475-4755912_pikachu-pokemon-pok%C3%A9mon-cute-kawaii-pixel-pixelart-pikachu-gen-3-sprite.png" alt="electric pokemon">
-          <img class="ground-sprite" name="ground" src="https://www.pngplay.com/wp-content/uploads/11/Geodude-PNG-HD-Free-File-Download.png" alt="ground pokemon">
+        <section class="battle-container hidden">
+
         </section>
       </section>
     </section>
     <section class="right-container">
       <img class="rival-sprite" src="https://www.pinclipart.com/picdir/big/319-3194654_pokemon-champion-blue-sprite-illustration-clipart.png" alt="pokemon rival">
-      <h2 class="rival-title">Rival</h2>
+      <h2 class="rival-title"></h2>
       <h2 class="rival-battles-won-title">Battles won: </h2>
     </section>
     <script src="player.js"></script>
