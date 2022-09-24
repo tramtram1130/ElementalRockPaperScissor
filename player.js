@@ -1,15 +1,15 @@
 class Player {
-  constructor() {
-    // this.name = name
+  constructor(name) {
+    this.name = name
     this.wins = 0
     this.elementSelection = undefined
   }
   takeTurn(element, hands) {
     if (element === 'random') {
-      var index = Math.floor(Math.random() * 3)
+      var index = Math.floor(Math.random() * hands.length )
       this.elementSelection = hands[index]
     }
   }
 }
 
-module.exports = Player
+// module.exports = Player
