@@ -48,7 +48,7 @@ button {
   margin-bottom: -5px;
 }
 
-.choose-your-game-title, .choose-your-fighter-title {
+.choose-your-game-title, .choose-your-fighter-title, .battle-result-title {
   text-align: center;
 }
 
@@ -120,7 +120,13 @@ button {
   justify-content: center;
 }
 
-.classic-mode-sprites, .difficult-mode-sprites {
+.fighter-selection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.classic-mode-sprites, .difficult-mode-sprites, .battle-container {
   display: flex;
   justify-content: center;
 }
@@ -153,6 +159,10 @@ button {
   width: 300px;
   height: 275px;
   margin-top: -60px;
+}
+
+.battle-container {
+
 }
 
 .hidden {
