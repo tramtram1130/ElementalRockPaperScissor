@@ -100,9 +100,9 @@ function updateScores() {
 
 function startNewRound() {
   if (currentGame.classicMode) {
-    setTimeout(playClassicMode, 2500)
+    setTimeout(playClassicMode, 2000)
   } else if (currentGame.difficultMode) {
-    setTimeout(playDifficultMode, 2500)
+    setTimeout(playDifficultMode, 2000)
   }
 }
 

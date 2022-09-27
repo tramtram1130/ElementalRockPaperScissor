@@ -1,49 +1,12 @@
-.body-container{
-  display: flex;
-  height: 100vh
+* {
+  color: white;
 }
 
-.left-container {
-  display: flex;
-  flex-direction: column;
-  border: black solid 5px;
-  width: 20%;
-}
-
-.trainer-sprite {
-  width: 50px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.trainer-title {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 35px;
-}
-
-.trainer-battles-won-title {
-  text-align: center;
-}
-
-button {
-  margin-top: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50px;
-  width: 150px;
-}
-
-.center-container {
-  display: flex;
-  flex-direction: column;
-  border: blue solid 5px;
-  width: 60%;
-}
+/* HEADER */
 
 .game-title {
-  font-size: 60px;
+  font-family: 'Press Start 2P';
+  font-size: 50px;
   text-align: center;
   margin-bottom: -5px;
 }
@@ -51,82 +14,106 @@ button {
 .choose-your-game-title,
 .choose-your-fighter-title,
 .battle-result-title {
+  font-family: 'Press Start 2P';
   text-align: center;
+  margin-top: 40px;
 }
 
-.classic-mode-container {
-  width: 220px;
-  height: 150px;
-  margin-left: auto;
-  margin-right: auto;
-    margin-top: 75px;
-  border: black solid 2px;
+/* STRUCTURE */
+
+.body-container{
+  display: flex;
+  height: 100vh;
+  background-color: #95D5B2;
 }
 
-.classic-mode-title {
-  text-align: center;
-  margin-bottom: -5px;
-}
-
-.classic-mode-container > p {
-  text-align: center;
-  margin-bottom: -7px;
-}
-
-.difficult-mode-container {
-  width: 220px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  border: black solid 2px;
-}
-
-.difficult-mode-title {
-  text-align: center;
-  margin-bottom: -5px;
-}
-
-.difficult-mode-container > p {
-  text-align: center;
-  margin-bottom: -7px;
-}
-
-.right-container {
+.center-container {
   display: flex;
   flex-direction: column;
-  border: red solid 5px;
+  background-color: #40916C;
+  width: 60%;
+}
+
+.left-container, .right-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #95D5B2;
   width: 20%;
 }
 
-.rival-sprite {
-  width: 70px;
+/* PLAYER INFO */
+
+.trainer-sprite, .rival-sprite {
+  width: 50px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.rival-title {
+.rival-sprite {
+  width: 70px;
+}
+
+.trainer-title, .rival-title {
+  font-family: 'Press Start 2P';
   text-align: center;
   margin-top: 15px;
-  font-size: 35px;
+  font-size: 25px;
 }
 
-.rival-battles-won-title {
+.trainer-battles-won-title, .rival-battles-won-title {
+  font-family: "play", sans-serif;
   text-align: center;
 }
 
-.game-board-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* CLASSIC + DIFFICULT MODE SELECTIONS */
+
+.classic-mode-container, .difficult-mode-container {
+  font-family: "play", sans-serif;
+  width: 220px;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: #2D6A4F;
+  border: #081C15 solid 1px;
 }
 
-.fighter-selection-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.classic-mode-container:hover, .difficult-mode-container:hover {
+  background-color: #23523d;
+  cursor: pointer;
 }
+
+.classic-mode-title, .difficult-mode-title {
+  font-family: 'Press Start 2P';
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.classic-mode-container > p, .difficult-mode-container > p {
+  text-align: center;
+}
+
+/* CHANGE MODE BUTTON */
+
+button {
+  font-family: 'Press Start 2P';
+  font-size: 12px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 170px;
+  background-color: #2D6A4F;
+}
+
+button:hover {
+  background-color: #3d8f6a;
+  cursor: pointer;
+}
+
+/* FIGHTER SPRITES */
 
 .classic-mode-sprites,
 .difficult-mode-sprites,
@@ -145,13 +132,11 @@ button {
 
 .classic-mode-sprites > img:hover,
 .difficult-mode-sprites > img:hover {
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.battle-container {
-  display: flex;
-  justify-content: center;
-}
+/* HIDDEN CLASS */
 
 .hidden {
   display: none;
