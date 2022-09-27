@@ -1,11 +1,9 @@
 // var Player = require('./player.js')
 
-// Something to research: Do I need to make a new game class each time game gets a reset.
-
 class Game {
   constructor() {
-    this.player = new Player('Trainer')
-    this.computer = new Player('Rival')
+    this.player = new Player('Trainer' ,'assets/trainer.png')
+    this.computer = new Player('Rival', 'assets/rival.png')
     this.classicMode = false
     this.difficultMode = false
     this.classicHands = ['water', 'fire', 'grass']
@@ -35,84 +33,19 @@ class Game {
     var computerSelection = this.computer.elementSelection
     if (playerSelection === computerSelection) {
       return "It's a draw!"
-    }
-    else if (playerSelection === 'water' && computerSelection === 'fire') {
+    } else if ( (playerSelection === 'water' && computerSelection === 'fire')
+    || (playerSelection === 'water' && computerSelection === 'ground')
+    || (playerSelection === 'fire' && computerSelection === 'grass')
+    || (playerSelection === 'fire' && computerSelection === 'electric')
+    || (playerSelection === 'grass' && computerSelection === 'water')
+    || (playerSelection === 'grass' && computerSelection === 'ground')
+    || (playerSelection === 'electric' && computerSelection === 'water')
+    || (playerSelection === 'electric' && computerSelection === 'grass')
+    || (playerSelection === 'ground' && computerSelection === 'electric')
+    || (playerSelection === 'ground' && computerSelection === 'fire') ) {
       this.player.wins += 1
       return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'water' && computerSelection === 'ground') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'fire' && computerSelection === 'grass') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'fire' && computerSelection === 'electric') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'grass' && computerSelection === 'water') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'grass' && computerSelection === 'ground') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'electric' && computerSelection === 'water') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'electric' && computerSelection === 'grass') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'ground' && computerSelection === 'electric') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'ground' && computerSelection === 'fire') {
-      this.player.wins += 1
-      return `${this.player.name} wins this battle!`
-    }
-    else if (playerSelection === 'water' && computerSelection === 'grass') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'water' && computerSelection === 'electric') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'fire' && computerSelection === 'water') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'fire' && computerSelection === 'ground') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'grass' && computerSelection === 'fire') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'grass' && computerSelection === 'electric') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'electric' && computerSelection === 'ground') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'electric' && computerSelection === 'fire') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'ground' && computerSelection === 'water') {
-      this.computer.wins += 1
-      return `${this.computer.name} wins this battle!`
-    }
-    else if (playerSelection === 'ground' && computerSelection === 'grass') {
+    } else {
       this.computer.wins += 1
       return `${this.computer.name} wins this battle!`
     }

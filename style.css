@@ -143,6 +143,11 @@ button {
   margin: 20px;
 }
 
+.classic-mode-sprites > img:hover,
+.difficult-mode-sprites > img:hover {
+    cursor: pointer;
+}
+
 .battle-container {
   display: flex;
   justify-content: center;
