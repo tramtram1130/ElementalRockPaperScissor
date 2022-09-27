@@ -1,5 +1,3 @@
-// var Player = require('./player.js')
-
 class Game {
   constructor() {
     this.player = new Player('Trainer' ,'assets/trainer.png')
