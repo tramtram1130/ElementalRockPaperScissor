@@ -1,5 +1,3 @@
-
-
 var chooseYourGameTitle = document.querySelector('.choose-your-game-title')
 var chooseYourFighterTitle = document.querySelector('.choose-your-fighter-title')
 var battleResultTitle = document.querySelector('.battle-result-title')
@@ -18,14 +16,20 @@ var difficultFighters = document.querySelector('.difficult-mode-sprites')
 var battleScene = document.querySelector('.battle-container')
 
 currentGame = new Game
-player1Title.innerText = currentGame.player.name
-player2Title.innerText = currentGame.computer.name
 
+window.addEventListener('load', initializePage)
 classicModeSelection.addEventListener('click', playClassicMode)
 difficultModeSelection.addEventListener('click', playDifficultMode)
 classicFighters.addEventListener('click', selectFighter)
 difficultFighters.addEventListener('click', selectFighter)
 changeModeButton.addEventListener('click', changeMode)
+
+function initializePage() {
+  player1Title.innerText = currentGame.player.name
+  player2Title.innerText = currentGame.computer.name
+  player1Token.setAttribute('src', currentGame.player.token)
+  player2Token.setAttribute('src', currentGame.computer.token)
+}
 
 function playClassicMode() {
   currentGame.selectClassicMode()
@@ -33,6 +37,8 @@ function playClassicMode() {
   hide(classicModeSelection)
   hide(difficultModeSelection)
   hide(difficultFighters)
+  hide(battleScene)
+  hide(battleResultTitle)
   unhide(chooseYourFighterTitle)
   unhide(fightersContainer)
   unhide(classicFighters)
@@ -44,6 +50,8 @@ function playDifficultMode() {
   hide(chooseYourGameTitle)
   hide(classicModeSelection)
   hide(difficultModeSelection)
+  hide(battleScene)
+  hide(battleResultTitle)
   unhide(chooseYourFighterTitle)
   unhide(fightersContainer)
   unhide(classicFighters)
@@ -53,21 +61,23 @@ function playDifficultMode() {
 
 function selectFighter() {
   var player1Selection = event.target.closest('img')
-  currentGame.player.elementSelection = player1Selection.name
-  battleScene.innerHTML = `<img src='assets/${player1Selection.name}.png'>`
-  currentGame.makeSelections()
-  battleScene.innerHTML += `<img src='assets/${currentGame.computer.elementSelection}.png'>`
-  hide(fightersContainer)
-  unhide(battleScene)
-  startBattle()
+  if(player1Selection) {
+    currentGame.player.elementSelection = player1Selection.name
+    battleScene.innerHTML = `<img src='assets/${player1Selection.name}.png'>`
+    currentGame.makeSelections()
+    battleScene.innerHTML += `<img src='assets/${currentGame.computer.elementSelection}.png'>`
+    hide(fightersContainer)
+    unhide(battleScene)
+    startBattle()
+  }
 }
 
 function startBattle() {
-  currentGame.checkForWin()
-  updateScores()
   battleResultTitle.innerText = currentGame.checkForWin()
+  updateScores()
   hide(chooseYourFighterTitle)
   unhide(battleResultTitle)
+  startNewRound()
 }
 
 function changeMode() {
@@ -86,6 +96,14 @@ function changeMode() {
 function updateScores() {
   player1Wins.innerText = `Battles won: ${currentGame.player.wins}`
   player2Wins.innerText = `Battles won: ${currentGame.computer.wins}`
+}
+
+function startNewRound() {
+  if (currentGame.classicMode) {
+    setTimeout(playClassicMode, 2500)
+  } else if (currentGame.difficultMode) {
+    setTimeout(playDifficultMode, 2500)
+  }
 }
 
 function hide(item) {
