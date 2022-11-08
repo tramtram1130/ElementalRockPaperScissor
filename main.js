@@ -43,6 +43,7 @@ function playClassicMode() {
   unhide(fightersContainer)
   unhide(classicFighters)
   unhide(changeModeButton)
+  changeModeButton.disabled = false
 }
 
 function playDifficultMode() {
@@ -57,6 +58,7 @@ function playDifficultMode() {
   unhide(classicFighters)
   unhide(difficultFighters)
   unhide(changeModeButton)
+  changeModeButton.disabled = false
 }
 
 function selectFighter() {
@@ -99,6 +101,7 @@ function updateScores() {
 }
 
 function startNewRound() {
+  changeModeButton.disabled = true
   if (currentGame.classicMode) {
     setTimeout(playClassicMode, 2000)
   } else if (currentGame.difficultMode) {
